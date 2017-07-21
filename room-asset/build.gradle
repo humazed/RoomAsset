@@ -47,7 +47,7 @@ ext {
     siteUrl = 'https://github.com/humazed/RoomAsset'
     gitUrl = 'https://github.com/humazed/RoomAsset.git'
 
-    libraryVersion = '1.0.0'
+    libraryVersion = '1.0.2'
 
     developerId = 'humazed'
     developerName = 'huma zed'
