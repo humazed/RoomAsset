@@ -36,16 +36,16 @@ dependencies {
 
 ext {
     bintrayRepo = 'maven'
-    bintrayName = 'room-for-asset'
+    bintrayName = 'room-asset'
 
     publishedGroupId = 'com.humazed'
-    libraryName = 'RoomForAsset'
-    artifact = 'room-for-asset'
+    libraryName = 'RoomAsset'
+    artifact = 'room-asset'
 
     libraryDescription = "An Android helper class to manage database creation and version management using an application's raw asset files."
 
-    siteUrl = 'https://github.com/humazed/RoomForAsset'
-    gitUrl = 'https://github.com/humazed/RoomForAsset.git'
+    siteUrl = 'https://github.com/humazed/RoomAsset'
+    gitUrl = 'https://github.com/humazed/RoomAsset.git'
 
     libraryVersion = '1.0.0'
 

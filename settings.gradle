@@ -1,1 +1,1 @@
-include ':sample', ':room-for-asset'
+include ':sample', ':room-asset-lib'
