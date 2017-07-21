@@ -11,7 +11,7 @@ It is implemented as an extension to `Room`, providing an easy way to use `Room`
 # Gradle Dependency
 
 [ ![Download](https://api.bintray.com/packages/humazed/maven/room-for-asset/images/download.svg) ](https://bintray.com/humazed/maven/room-for-asset/_latestVersion)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/b2a019a18e3a48e5b50ae4a5f1ed3135)](https://www.codacy.com/app/humazed/RoomForAsset?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=humazed/RoomForAsset&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/b2a019a18e3a48e5b50ae4a5f1ed3135)](https://www.codacy.com/app/humazed/RoomAsset?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=humazed/RoomAsset&amp;utm_campaign=Badge_Grade)
 [![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg?style=flat-square)](https://www.apache.org/licenses/LICENSE-2.0.html)
 
 The Gradle dependency is available via [jCenter](https://bintray.com/humazed/maven/room-for-asset/view).
