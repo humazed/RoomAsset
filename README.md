@@ -16,10 +16,10 @@ If you are using the Gradle build system, simply add the following dependency in
 dependencies {
     compile 'com.humazed:room-for-asset:1.0.0'
 }
-
+```
 -----
 
-RoomForAsset is intended as a drop in alternative for the framework's [Room](https://developer.android.com/topic/libraries/architecture/room.html).
+`RoomForAsset` is intended as a drop in alternative for the framework's [Room](https://developer.android.com/topic/libraries/architecture/room.html).
 
 You can use `RoomForAsset` as you use `Room` but with two changes:
 
@@ -31,33 +31,27 @@ You can use `RoomForAsset` as you use `Room` but with two changes:
   val employees = db.chinookDao().employees
 ```
 
-SQLiteAssetHelper relies upon asset file and folder naming conventions. Your `assets` folder will either be under your project root, or under `src/main` if you are using the default gradle project structure. At minimum, you must provide the following:
+`RoomForAsset` relies upon asset file and folder naming conventions. Your `assets` folder will either be under your project root, or under `src/main` if you are using the default gradle project structure. At minimum, you must provide the following:
 
 * A `databases` folder inside `assets`
 * A SQLite database inside the `databases` folder whose file name matches the database name you provide in code (including the file extension, if any)
 
 For the example above, the project would contain the following:
 
-    assets/databases/northwind.db
+    assets/databases/chinook.db
 
-Earlier versions of this library required the database asset to be compressed within a ZIP archive. This is no longer a requirement, but is still supported. Applications still targeting Gingerbread (API 10) or lower should continue to provide a compressed archive to ensure large database files are not corrupted during the packaging process. The more Linux friendly GZIP format is also supported. The naming conventions using the above example are as follows:
-
-* ZIP: `assets/databases/northwind.db.zip` (a single SQLite database file must be the only file within the archive)
-* GZIP: `assets/databases/northwind.db.gz`
 
 The database will be extracted from the assets and copied into place within your application's private data directory. If you prefer to store the database file somewhere else (such as external storage) you can use the alternate constructor to specify a storage path. You must ensure that this path is available and writable whenever your application needs to access the database.
 
-```java
-super(context, DATABASE_NAME, context.getExternalFilesDir(null).getAbsolutePath(), null, DATABASE_VERSION);
+```kotlin
+    RoomAsset.databaseBuilder(applicationContext, AppDatabase::class.java, "chinook.db",
+                    applicationContext.getExternalFilesDir(null).absolutePath).build()
 ```
 
-The database is made available for use the first time either `getReadableDatabase()` or `getWritableDatabase()` is called.
+The library will throw a `SQLiteAssetHelperException` if you do not provide the appropriately named file.
 
-The class will throw a `SQLiteAssetHelperException` if you do not provide the appropriately named file.
 
-The SQLiteOpenHelper methods `onConfigure`, `onCreate` and `onDowngrade` are not supported by this implementation and have been declared `final`.
-
-The [samples:database-v1](https://github.com/jgilfelt/android-sqlite-asset-helper/tree/master/samples/database-v1) project demonstrates a simple database creation and usage example using the classic Northwind database.
+The [samples:database-v1](https://github.com/humazed/RoomForAsset/tree/master/app) project demonstrates a simple database creation and usage example using the classic [Chinook database](http://www.sqlitetutorial.net/sqlite-sample-database).
 
 
 Credits
