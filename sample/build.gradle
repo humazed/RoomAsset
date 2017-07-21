@@ -40,6 +40,6 @@ dependencies {
 
     implementation 'com.jakewharton.fliptables:fliptables:1.0.2'
 
-    implementation project(path: ':room-asset-lib')
+    implementation project(path: ':room-asset')
 }
 
