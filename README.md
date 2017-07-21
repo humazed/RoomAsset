@@ -1,19 +1,28 @@
 # RoomForAsset
+
 An Android helper class to manage database creation and version management using an application's raw asset files.
 
 This library provides developers with a simple way to ship their Android app with an existing SQLite database (which may be pre-populated with data) and to manage its initial creation and any upgrades required with subsequent version releases.
 
 It is implemented as an extension to `Room`, providing an easy way to use `Room` with an existing SQLite database.
 
-Setup
------
+---
 
-#### Gradle
+# Gradle Dependency
 
-If you are using the Gradle build system, simply add the following dependency in your `build.gradle` file:
+[ ![Download](https://api.bintray.com/packages/humazed/maven/room-for-asset/images/download.svg) ](https://bintray.com/humazed/maven/room-for-asset/_latestVersion)
+[![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg?style=flat-square)](https://www.apache.org/licenses/LICENSE-2.0.html)
 
-```groovy
+The Gradle dependency is available via [jCenter](https://bintray.com/humazed/maven/room-for-asset/view).
+jCenter is the default Maven repository used by Android Studio.
+
+### Dependency
+
+Add this to your module's `build.gradle` file (make sure the version matches the last [release](https://github.com/humazed/RoomForAssety/releases/latest)):
+
+```gradle
 dependencies {
+    // ... other dependencies
     compile 'com.humazed:room-for-asset:1.0.0'
 }
 ```
