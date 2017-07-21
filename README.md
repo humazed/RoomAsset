@@ -60,15 +60,9 @@ The database will be extracted from the assets and copied into place within your
 The library will throw a `SQLiteAssetHelperException` if you do not provide the appropriately named file.
 
 
-The [samples:database-v1](https://github.com/humazed/RoomForAsset/tree/master/app) project demonstrates a simple database creation and usage example using the classic [Chinook database](http://www.sqlitetutorial.net/sqlite-sample-database).
+The [samples](https://github.com/humazed/RoomForAsset/tree/master/app) project demonstrates a simple database creation and usage example using the classic [Chinook database](http://www.sqlitetutorial.net/sqlite-sample-database).
 
 
-Credits
--------
-
-####Author:
-
-  * [Humazed](https://github.com/humazed)
 
 License
 -------
