@@ -1,4 +1,4 @@
-# RoomForAsset
+# RoomAsset
 
 An Android helper class to manage database creation and version management using an application's raw asset files.
 
@@ -11,6 +11,7 @@ It is implemented as an extension to `Room`, providing an easy way to use `Room`
 # Gradle Dependency
 
 [ ![Download](https://api.bintray.com/packages/humazed/maven/room-for-asset/images/download.svg) ](https://bintray.com/humazed/maven/room-for-asset/_latestVersion)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/b2a019a18e3a48e5b50ae4a5f1ed3135)](https://www.codacy.com/app/humazed/RoomForAsset?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=humazed/RoomForAsset&amp;utm_campaign=Badge_Grade)
 [![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg?style=flat-square)](https://www.apache.org/licenses/LICENSE-2.0.html)
 
 The Gradle dependency is available via [jCenter](https://bintray.com/humazed/maven/room-for-asset/view).
@@ -18,19 +19,19 @@ jCenter is the default Maven repository used by Android Studio.
 
 ### Dependency
 
-Add this to your module's `build.gradle` file (make sure the version matches the last [release](https://github.com/humazed/RoomForAssety/releases/latest)):
+Add this to your module's `build.gradle` file (make sure the version matches the last [release](https://github.com/humazed/RoomAssety/releases/latest)):
 
 ```gradle
 dependencies {
     // ... other dependencies
-    compile 'com.humazed:room-for-asset:1.0.0'
+    compile 'com.humazed:room-asset:1.0.0'
 }
 ```
 -----
 
-`RoomForAsset` is intended as a drop in alternative for the framework's [Room](https://developer.android.com/topic/libraries/architecture/room.html).
+`RoomAsset` is intended as a drop in alternative for the framework's [Room](https://developer.android.com/topic/libraries/architecture/room.html).
 
-You can use `RoomForAsset` as you use `Room` but with two changes:
+You can use `RoomAsset` as you use `Room` but with two changes:
 
 1. Use `RoomAsset.databaseBuilder()` instead of `Room.databaseBuilder()` 
 2. In `@Database` use `version = 2` instead of `version = 1`
@@ -40,7 +41,7 @@ You can use `RoomForAsset` as you use `Room` but with two changes:
   val employees = db.chinookDao().employees
 ```
 
-`RoomForAsset` relies upon asset file and folder naming conventions. Your `assets` folder will either be under your project root, or under `src/main` if you are using the default gradle project structure. At minimum, you must provide the following:
+`RoomAsset` relies upon asset file and folder naming conventions. Your `assets` folder will either be under your project root, or under `src/main` if you are using the default gradle project structure. At minimum, you must provide the following:
 
 * A `databases` folder inside `assets`
 * A SQLite database inside the `databases` folder whose file name matches the database name you provide in code (including the file extension, if any)
@@ -60,7 +61,7 @@ The database will be extracted from the assets and copied into place within your
 The library will throw a `SQLiteAssetHelperException` if you do not provide the appropriately named file.
 
 
-The [samples](https://github.com/humazed/RoomForAsset/tree/master/app) project demonstrates a simple database creation and usage example using the classic [Chinook database](http://www.sqlitetutorial.net/sqlite-sample-database).
+The [samples](https://github.com/humazed/RoomAsset/tree/master/app) project demonstrates a simple database creation and usage example using the classic [Chinook database](http://www.sqlitetutorial.net/sqlite-sample-database).
 
 
 
