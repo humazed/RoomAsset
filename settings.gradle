@@ -1,1 +1,1 @@
-include ':app', ':room-for-asset'
+include ':sample', ':room-for-asset'

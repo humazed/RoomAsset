@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity(), AnkoLogger {
 
         employeesButton.setOnClickListener {
             thread {
+                val db = RoomAsset.databaseBuilder(applicationContext, AppDatabase::class.java, "chinook.db").build()
                 val employees = db.chinookDao().employees
 
                 runOnUiThread {
