@@ -54,8 +54,8 @@ For the example above, the project would contain the following:
 The database will be extracted from the assets and copied into place within your application's private data directory. If you prefer to store the database file somewhere else (such as external storage) you can use the alternate constructor to specify a storage path. You must ensure that this path is available and writable whenever your application needs to access the database.
 
 ```kotlin
-    RoomAsset.databaseBuilder(applicationContext, AppDatabase::class.java, "chinook.db",
-                    applicationContext.getExternalFilesDir(null).absolutePath).build()
+  val db = RoomAsset.databaseBuilder(applicationContext, AppDatabase::class.java, "chinook.db",
+        applicationContext.getExternalFilesDir(null).absolutePath).build()
 ```
 
 The library will throw a `SQLiteAssetHelperException` if you do not provide the appropriately named file.
