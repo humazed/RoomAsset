@@ -24,7 +24,7 @@ Add this to your module's `build.gradle` file (make sure the version matches the
 ```gradle
 dependencies {
     // ... other dependencies
-    compile 'com.humazed:room-asset:1.0.2'
+    compile 'com.github.humazed:room-asset:1.0.3'
 }
 ```
 -----

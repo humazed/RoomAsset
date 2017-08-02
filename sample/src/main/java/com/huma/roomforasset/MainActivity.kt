@@ -1,5 +1,6 @@
 package com.huma.roomforasset
 
+import android.database.sqlite.SQLiteOpenHelper
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.huma.room_for_asset.RoomAsset
@@ -19,7 +20,6 @@ class MainActivity : AppCompatActivity(), AnkoLogger {
 
         employeesButton.setOnClickListener {
             thread {
-                val db = RoomAsset.databaseBuilder(applicationContext, AppDatabase::class.java, "chinook.db").build()
                 val employees = db.chinookDao().employees
 
                 runOnUiThread {
