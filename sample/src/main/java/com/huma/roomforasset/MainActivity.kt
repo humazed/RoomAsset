@@ -1,8 +1,10 @@
 package com.huma.roomforasset
 
-import android.database.sqlite.SQLiteOpenHelper
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.view.Menu
+import android.view.MenuItem
 import com.huma.room_for_asset.RoomAsset
 import com.jakewharton.fliptables.FlipTableConverters
 import kotlinx.android.synthetic.main.activity_main.*
@@ -44,5 +46,20 @@ class MainActivity : AppCompatActivity(), AnkoLogger {
             }
         }
 
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.menu_main_activity, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.action_open_java_activity -> {
+                startActivity(Intent(this, MainActivity::class.java))
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 }
