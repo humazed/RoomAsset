@@ -32,7 +32,7 @@ dependencies {
 
     implementation "android.arch.persistence.room:runtime:$arch_version"
 
-    api 'com.readystatesoftware.sqliteasset:sqliteassethelper:2.0.1'
+    implementation 'com.readystatesoftware.sqliteasset:sqliteassethelper:2.0.1'
 }
 
 ext {
