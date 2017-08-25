@@ -23,8 +23,8 @@ interface ChinookDao {
                 childColumns = arrayOf("ReportsTo"))))
 data class Employees(
         @PrimaryKey @ColumnInfo(name = "EmployeeId") var employeeId: Int = 0,
-        @ColumnInfo(name = "LastName") var lastName: String? = "",
-        @ColumnInfo(name = "FirstName") var firstName: String? = "",
+        @ColumnInfo(name = "LastName") var lastName: String = "",
+        @ColumnInfo(name = "FirstName") var firstName: String = "",
         @ColumnInfo(name = "Title") var title: String? = "",
         @ColumnInfo(name = "ReportsTo") var reportsTo: String? = "",
         @ColumnInfo(name = "BirthDate") var birthDate: String? = "",
@@ -46,8 +46,8 @@ data class Employees(
                 childColumns = arrayOf("SupportRepId"))))
 data class Customers(
         @PrimaryKey @ColumnInfo(name = "CustomerId") var id: Int = 0,
-        @ColumnInfo(name = "FirstName") var FirstName: String? = "",
-        @ColumnInfo(name = "LastName") var LastName: String? = "",
+        @ColumnInfo(name = "FirstName") var FirstName: String = "",
+        @ColumnInfo(name = "LastName") var LastName: String = "",
         @ColumnInfo(name = "Company") var Company: String? = "",
         @ColumnInfo(name = "Address") var Address: String? = "",
         @ColumnInfo(name = "City") var City: String? = "",
@@ -56,6 +56,6 @@ data class Customers(
         @ColumnInfo(name = "PostalCode") var PostalCode: String? = "",
         @ColumnInfo(name = "Phone") var Phone: String? = "",
         @ColumnInfo(name = "Fax") var Fax: String? = "",
-        @ColumnInfo(name = "Email") var Email: String? = "",
+        @ColumnInfo(name = "Email") var Email: String = "",
         @ColumnInfo(name = "SupportRepId") var SupportRepId: Int? = 0
 )
