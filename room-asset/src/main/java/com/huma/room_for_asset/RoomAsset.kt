@@ -57,12 +57,12 @@ class RoomAsset {
          */
         private fun openDb(context: Context, name: String, storageDirectory: String?, factory: SQLiteDatabase.CursorFactory?) {
             val instantiated = "instantiated"
-            val sharedPref = context.getSharedPreferences("RoomAsset", Context.MODE_PRIVATE)
+            val sharedPref = context.defaultSharedPreferences
 
             if (!sharedPref.getBoolean(instantiated, false)) {
                 SQLiteAssetHelper(context, name, storageDirectory, factory, 1).writableDatabase.close()
                 sharedPref.edit().putBoolean(instantiated, true).apply()
-                Log.w(TAG, "RoomAssetKt is ready ")
+                Log.w(TAG, "RoomAsset is ready ")
             }
         }
     }
