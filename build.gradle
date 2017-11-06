@@ -5,6 +5,7 @@ buildscript {
         anko_version = '0.10.2'
         arch_version = '1.0.0-rc1'
         support_version = '27.0.0'
+        dokka_version = '0.9.15'
     }
 
     repositories {
@@ -14,6 +15,7 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:3.0.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.dokka:dokka-android-gradle-plugin:$dokka_version"
 
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'
     }

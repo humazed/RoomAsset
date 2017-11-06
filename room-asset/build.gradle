@@ -1,6 +1,7 @@
 plugins { id "com.github.dcendents.android-maven" version "2.0" }
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
+apply plugin: 'org.jetbrains.dokka-android'
 
 android {
     compileSdkVersion 27
@@ -31,6 +32,11 @@ dependencies {
     implementation "android.arch.persistence.room:runtime:$arch_version"
 
     implementation 'com.readystatesoftware.sqliteasset:sqliteassethelper:2.0.1'
+}
+
+dokka {
+    outputFormat = 'html'
+    outputDirectory = "$buildDir/javadoc"
 }
 
 ext {

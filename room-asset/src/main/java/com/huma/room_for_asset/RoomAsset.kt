@@ -23,14 +23,14 @@ class RoomAsset {
          * should keep a reference to it and re-use it.
          *
          * @param context          The context for the database. This is usually the Application context.
-         * @param klass            The abstract class which is annotated with {@link Database} and extends
+         * @param klass            The abstract class which is annotated with [Database] and extends
          *                         [RoomDatabase].
          * @param name             The name of the database file.
          * @param storageDirectory To store the database file upon creation; caller must ensure that
          *                         the specified absolute path is available and can be written to;
          *                         not needed if the database is the default location :assets/database.
          * @param factory          to use for creating cursor objects, or null for the default.
-         * @return A [RoomDatabaseBuilder] which you can use to create the database.
+         * @return A [RoomDatabase.Builder<T>] which you can use to create the database.
          */
         @JvmStatic
         @JvmOverloads
