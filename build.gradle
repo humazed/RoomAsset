@@ -3,8 +3,8 @@ buildscript {
     ext {
         kotlin_version = '1.2.30'
         anko_version = '0.10.4'
+        support_version = '27.1.0'
         arch_version = '1.0.0'
-        support_version = '27.0.0'
         dokka_version = '0.9.15'
     }
 
