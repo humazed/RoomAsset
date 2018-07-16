@@ -17,7 +17,7 @@ It is implemented as an extension to `Room`, providing an easy way to use `Room`
 
 ### Dependency
 
-Add this to your module's `build.gradle` file (make sure the version matches the last [release](https://github.com/humazed/RoomAssety/releases/latest)):
+Add this to your module's `build.gradle` file (make sure the version matches the last [release](https://github.com/humazed/RoomAsset/releases/latest)):
 
 Add it in your root build.gradle at the end of repositories:
 
