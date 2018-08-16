@@ -18,9 +18,9 @@ interface ChinookDao {
 }
 
 @Entity(tableName = "employees",
-        foreignKeys = arrayOf(ForeignKey(entity = Employees::class,
-                parentColumns = arrayOf("EmployeeId"),
-                childColumns = arrayOf("ReportsTo"))))
+        foreignKeys = [ForeignKey(entity = Employees::class,
+                parentColumns = ["EmployeeId"],
+                childColumns = ["ReportsTo"])])
 data class Employees(
         @PrimaryKey @ColumnInfo(name = "EmployeeId") var employeeId: Int = 0,
         @ColumnInfo(name = "LastName") var lastName: String = "",
@@ -41,9 +41,9 @@ data class Employees(
 
 
 @Entity(tableName = "customers",
-        foreignKeys = arrayOf(ForeignKey(entity = Employees::class,
-                parentColumns = arrayOf("EmployeeId"),
-                childColumns = arrayOf("SupportRepId"))))
+        foreignKeys = [ForeignKey(entity = Employees::class,
+                parentColumns = ["EmployeeId"],
+                childColumns = ["SupportRepId"])])
 data class Customers(
         @PrimaryKey @ColumnInfo(name = "CustomerId") var id: Int = 0,
         @ColumnInfo(name = "FirstName") var FirstName: String = "",
