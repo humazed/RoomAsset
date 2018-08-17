@@ -1,6 +1,7 @@
 package com.huma.room_for_asset
 
 import android.arch.persistence.db.SupportSQLiteDatabase
+import android.arch.persistence.room.Database
 import android.arch.persistence.room.Room
 import android.arch.persistence.room.RoomDatabase
 import android.arch.persistence.room.migration.Migration
@@ -23,7 +24,7 @@ class RoomAsset {
          * should keep a reference to it and re-use it.
          *
          * @param context          The context for the database. This is usually the Application context.
-         * @param klass            The abstract class which is annotated with [Database] and extends
+         * @param klass            The abstract class which is annotated with @[Database] and extends
          *                         [RoomDatabase].
          * @param name             The name of the database file.
          * @param storageDirectory To store the database file upon creation; caller must ensure that
