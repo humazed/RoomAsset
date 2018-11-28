@@ -73,7 +73,7 @@ The library will throw a `SQLiteAssetHelperException` if you do not provide the 
 Supported data types: `TEXT`, `INTEGER`, `REAL`, `BLOB`
 
 
-The [samples](https://github.com/humazed/RoomAsset/tree/master/app) project demonstrates a simple database creation and usage example using the classic [Chinook database](http://www.sqlitetutorial.net/sqlite-sample-database).
+The [sample](https://github.com/humazed/RoomAsset/tree/master/sample) project demonstrates a simple database creation and usage example using the classic [Chinook database](http://www.sqlitetutorial.net/sqlite-sample-database).
 
 
 
