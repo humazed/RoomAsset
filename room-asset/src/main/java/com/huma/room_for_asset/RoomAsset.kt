@@ -57,7 +57,7 @@ class RoomAsset {
          * Open the database and copy it to data folder using [SQLiteAssetHelper]
          */
         private fun openDb(context: Context, name: String, storageDirectory: String?, factory: SQLiteDatabase.CursorFactory?) {
-            val instantiated = "instantiated"
+            val instantiated = "instantiated_${name}"
             val sharedPref = context.defaultSharedPreferences
 
             if (!sharedPref.getBoolean(instantiated, false)) {
