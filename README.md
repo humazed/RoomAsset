@@ -1,3 +1,6 @@
+## Room now supports using a pre-packaged database out of the box, since version 2.2.0
+https://developer.android.com/jetpack/androidx/releases/room#2.2.0
+
 # RoomAsset
 
 An Android helper class to manage database creation and version management using an application's raw asset files.
