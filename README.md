@@ -1,6 +1,9 @@
 ## Room now supports using a pre-packaged database out of the box, since version 2.2.0
 https://developer.android.com/jetpack/androidx/releases/room#2.2.0
 
+### As the built-in Room support is extremely rudimentary here's a library that supports migration as well as keeping specified columns that eg contain userdata
+https://github.com/ueen/RoomAssetHelper
+
 # RoomAsset
 
 An Android helper class to manage database creation and version management using an application's raw asset files.
